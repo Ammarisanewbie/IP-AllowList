@@ -33,6 +33,34 @@ This works for files in _.txt_ and _.csv_ format
 
 ![image](https://github.com/Ammarisanewbie/IP-AllowList/assets/108499824/c9c91a7c-4c62-41df-8cc7-d2e1bbaa824b)
 
-- 
 *Ref 2: How to Open text files*
 
+- `with open()` is used to open the input text files. These files contain the list of IP addresses, with "allow_list.txt" containing the initial list of IP addresses permitted to access and "remove_list.txt" containing the list of IP addresses to be removed from the allow list.
+- `r`: the `r` parameter is passed to inform Python that we will read the file input.  _Some other parameters include:_
+  -  _w : write_
+  -   _a : append_
+- `file`: is a self-declared local variable of your choice.
+- *Important: Only the file's directory, "r" and `file` are mutable.
+
+
+### 3. Read Files Content
+
+![image](https://github.com/Ammarisanewbie/IP-AllowList/assets/108499824/05fe3ad7-9f9d-423d-ba70-edc899d66012)
+
+*Ref 3: How to Read Files Content*
+
+- Using `read()` method, the code reads the content of the input files and stores them as strings in _allowIP_ and _removeIP_
+- Initialising them in variables allows us to use the contents outside the block.
+
+### 4. Convert Strings to Lists
+
+![image](https://github.com/Ammarisanewbie/IP-AllowList/assets/108499824/bdfb55ec-7d39-48c7-b3dd-5d67c0952367)
+
+*Ref 4: How to Convert Strings to Lists*
+
+- Using `split()` method, the strings stored in _allowIP_ and _removeIP_ are then converted into lists of IP addresses.
+- This method splits the string into substrings based on whitespace (_by default, leaving it empty_) and returns a list of these substrings.
+- `split(x)`: _x_ is the parameter defined based on where you wish to split. _Some other parameters include:_
+  - _, :  split at commas_
+  - _\n : split at newlines _
+- `split()` method is typically used to filter out unwanted content from what you need 
