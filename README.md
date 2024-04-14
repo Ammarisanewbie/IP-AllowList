@@ -2,7 +2,7 @@
 
 ## Objective
 
-The objective of this IP Allow List program is to automate the management of IP addresses permitted to access restricted content. This automation streamlines the process of managing access control measures based on IP addresses, reducing the likelihood of unauthorized access and enhancing overall security.
+The objective of this IP Allow List program is to automate the management of IP addresses permitted to access restricted content. This automation streamlines the process of managing access control measures based on IP addresses, reducing the likelihood of unauthorised access and enhancing overall security.
 
 ### Skills Learned
 
@@ -63,4 +63,35 @@ This works for files in _.txt_ and _.csv_ format
 - `split(x)`: _x_ is the parameter defined based on where you wish to split. _Some other parameters include:_
   - _, :  split at commas_
   - _\n : split at newlines _
-- `split()` method is typically used to filter out unwanted content from what you need 
+- `split()` method is typically used to filter out unwanted content from what you need
+
+### 5. Iterate Through the Remove List 
+
+![image](https://github.com/Ammarisanewbie/IP-AllowList/assets/108499824/1bcecb49-a3b6-4e6a-9dab-0b19c6d040da)
+
+*Ref 5: Iterating through remove_list*
+
+- The code iterates through each IP address in the remove list using a `for` loop.
+- For each IP address (ip) in the remove list, it checks if the IP address is present in the allow list (allow_list).
+  
+### 6. Remove Matching IP Addresses 
+
+![image](https://github.com/Ammarisanewbie/IP-AllowList/assets/108499824/ac87c1a2-390c-4e43-86b3-b115945d3a1c)
+
+*Ref 6: Removing IP*
+
+- Using IFELSE, f an IP address(ip) from the remove list is found in the allow list
+- it is removed using the `remove()` list method.
+- This ensures that any IP addresses specified for removal are excluded from the final allow list
+
+### 7. Update the Allow List File
+  
+![image](https://github.com/Ammarisanewbie/IP-AllowList/assets/108499824/8fb55eb7-14c1-4ae0-888b-a913553683da)
+
+*Ref 7: Update new list of IP addresses into string*
+
+- Initialising a new variable called `updated_allow_list`, we use `.join()` to join the remaining IP addresses in the allow list with newline characters `"\n"`
+- This formatted string is then written back to the "allow_list.txt" file using the `write()` method.
+- The code execution completes, and the allow list file is updated with the revised list of IP addresses.
+
+
